@@ -1,0 +1,2 @@
+import{useState}from'react';import'./index.css'
+export function PackingList({items=[]}){const[checked,setChecked]=useState({});if(!items.length)return <p className="empty-small">No packing items were generated.</p>;return <div className="packing">{items.map((item,i)=>{const key=item._id||i;const done=checked[key]??Boolean(item.isPacked);return <label className={done?'packed':''} key={key}><input type="checkbox" checked={done} onChange={()=>setChecked({...checked,[key]:!done})}/>{item.item}</label>})}</div>}

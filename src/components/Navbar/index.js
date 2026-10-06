@@ -1,0 +1,2 @@
+import './index.css'
+export function Navbar({user,activeView,onChangeView,onSignOut}){return <header className="navbar"><strong>✦ Trao</strong><nav><button className={activeView==='trips'?'active':''} onClick={()=>onChangeView('trips')}>My Trips</button><button className={activeView==='profile'?'active':''} onClick={()=>onChangeView('profile')}>Profile</button></nav><div className="nav-user">{user.email}<button onClick={onSignOut}>Sign out</button></div></header>}

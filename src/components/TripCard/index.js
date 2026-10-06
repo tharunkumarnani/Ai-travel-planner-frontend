@@ -1,0 +1,2 @@
+import './index.css'
+export function TripCard({trip,active,onClick}){return <button className={'trip-card '+(active?'active':'')} onClick={onClick}><span>✈</span><div><strong>{trip.destination}</strong><small>{trip.durationDays} days · {trip.budgetTier}</small></div><b>›</b></button>}
